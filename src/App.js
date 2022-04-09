@@ -1,23 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import Navbar from './components/navbar/Navbar';
+import LearnPage from './pages/Learn/Learn.Page';
+import { Navigate, Route, Routes } from 'react-router-dom'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App bg-c-black" >
+      <Navbar />
+      <Routes>
+        <Route path='/' element={<Navigate to='/learn'/>}/>
+
+        <Route path='/learn' element={<LearnPage/>}/>
+
+        <Route path='/quiz' element={'quiz'} />
+        
+        <Route path='/profile' element={'profile'}/>
+      </Routes>
     </div>
   );
 }
