@@ -17,7 +17,7 @@ const LearnPage = () => {
 
     }, [currentWord])
     return (
-        <div className="h-screen flex items-start px-4   md:px-10 lg:px-16 justify-between" >
+        <div className=" flex items-start px-4   md:px-10 lg:px-16 justify-between" >
             <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-8 gap-4 rounded-lg p-8 border-cyan-400 border-2 border-solid" style={{ width: '72%' }} >
                 {
                     Object.keys(data).map(key =>
